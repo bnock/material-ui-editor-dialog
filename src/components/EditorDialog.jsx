@@ -1,4 +1,4 @@
-import 'react-quill/dist/quill.snow.css';
+import 'react-quill-2/dist/quill.snow.css';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
@@ -16,7 +16,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import InputLabel from '@material-ui/core/InputLabel';
 import Switch from '@material-ui/core/Switch';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import green from '@material-ui/core/colors/green';
 import CancelIcon from '@material-ui/icons/Cancel';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import { isValidDate, isValidEmail } from '../utilities/validatorUtility';
@@ -39,19 +38,18 @@ const styles = (theme) => ({
         marginBottom: theme.spacing(1)
     },
     saveButton: {
-        color: green['700']
+        color: theme.palette.primary.main
     }
 });
 
 class EditorDialog extends Component {
     static propTypes = {
-        classes: PropTypes.object.isRequired,
         formConfig: PropTypes.arrayOf(PropTypes.shape({
             type: PropTypes.oneOf([TEXT_TYPE, TEXT_AREA_TYPE, RICH_TEXT_AREA_TYPE, NUMBER_TYPE, PASSWORD_TYPE,
                 EMAIL_TYPE, CURRENCY_TYPE, PERCENT_TYPE, TOGGLE_TYPE, SELECT_TYPE, DATE_TYPE]).isRequired,
             key: PropTypes.string.isRequired,
             label: PropTypes.string.isRequired,
-            required: PropTypes.bool.isRequired,
+            required: PropTypes.bool,
             readOnly: PropTypes.bool,
             selectOptions: PropTypes.arrayOf(PropTypes.shape({
                 key: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -215,9 +213,9 @@ class EditorDialog extends Component {
                             InputLabelProps={inputLabelProps}
                             className={classes.input}
                         >
-                            {config.type === SELECT_TYPE && config.selectOptions.map(option => {
-                                return <MenuItem key={option.key} value={option.key}>{option.label}</MenuItem>
-                            })}
+                            {config.type === SELECT_TYPE && config.selectOptions.map(option => (
+                                <MenuItem key={option.key} value={option.key}>{option.label}</MenuItem>
+                            ))}
                         </TextField>
                     );
             }

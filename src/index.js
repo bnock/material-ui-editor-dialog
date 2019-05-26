@@ -1,3 +1,3 @@
-import EditorDialog  from './containers/EditorDialog';
+import EditorDialog from './components/EditorDialog';
 
-export default EditorDialog;
+export { EditorDialog };
