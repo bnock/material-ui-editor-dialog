@@ -1,6 +1,6 @@
 {
     "name": "@bnock/material-ui-editor-dialog",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "React editor dialog built using Material UI",
     "main": "dist/material-ui-editor-dialog.js",
     "repository": {
