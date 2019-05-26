@@ -20,26 +20,20 @@
         "@material-ui/core": "^4.0.0",
         "@material-ui/icons": "^4.0.0",
         "axios": "^0.18.0",
-        "immer": "^3.1.2",
         "lodash": "^4.17.11",
         "moment": "^2.24.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-quill-2": "^2.0.2",
-        "react-redux": "^7.0.3",
-        "redux": "^4.0.1",
-        "redux-thunk": "^2.3.0",
         "typeface-roboto": "^0.0.54"
     },
     "devDependencies": {
         "@babel/core": "^7.4.5",
         "@babel/plugin-proposal-class-properties": "^7.4.4",
-        "@babel/plugin-proposal-decorators": "^7.4.4",
         "@babel/preset-react": "^7.0.0",
         "cross-env": "^5.2.0",
         "laravel-mix": "^4.0.15",
-        "prop-types": "^15.7.2",
-        "redux-logger": "^3.0.6"
+        "prop-types": "^15.7.2"
     },
     "bugs": {
         "url": "https://github.com/bnock/material-ui-editor-dialog/issues"
