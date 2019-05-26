@@ -1,9 +1,12 @@
 {
-    "name": "material-ui-editor-dialog",
+    "name": "@bnock/material-ui-editor-dialog",
     "version": "0.1.0",
     "description": "React editor dialog built using Material UI",
     "main": "dist/material-ui-editor-dialog.js",
-    "repository": "https://github.com/bnock/material-ui-editor-dialog.git",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bnock/material-ui-editor-dialog.git"
+    },
     "author": "Bradford Nock <bradford.nock@gmail.com>",
     "license": "MIT",
     "scripts": {
@@ -37,5 +40,9 @@
         "laravel-mix": "^4.0.15",
         "prop-types": "^15.7.2",
         "redux-logger": "^3.0.6"
-    }
+    },
+    "bugs": {
+        "url": "https://github.com/bnock/material-ui-editor-dialog/issues"
+    },
+    "homepage": "https://github.com/bnock/material-ui-editor-dialog#readme"
 }
